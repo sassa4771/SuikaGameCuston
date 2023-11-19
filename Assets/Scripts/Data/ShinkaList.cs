@@ -20,6 +20,7 @@ public class ShinkaList : MonoBehaviour
             param.ObjectName = "Object";
 
             var newObject = InstanceManager.Instance.Instance_Object(param);
+            Destroy(newObject.GetComponent<ControllManager>());
 
             // RectTransform を取得
             RectTransform rectTransform = newObject.GetComponent<RectTransform>();

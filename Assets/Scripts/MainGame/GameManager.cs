@@ -30,6 +30,7 @@ public class GameManager : Singleton<GameManager>
 
         if (PreviousNextObject != null) Destroy(PreviousNextObject);
         PreviousNextObject = im.Instance_Object(param);
+        Destroy(PreviousNextObject.GetComponent<ControllManager>());
     }
 
     //操作できる次のオブジェクトを表示する
